@@ -1,0 +1,22 @@
+class Human:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def check_adult(self):
+        if self.age >= 20:
+            print(f"{self.name}は大人です。")
+        else:
+            print(f"{self.name}は大人ではありません。")
+
+# Humanクラスのインスタンスを複数生成してリストに追加
+humans = [
+    Human("Taro", 25),
+    Human("Hanako", 18),
+    Human("Yuko", 30),
+    Human("Ken", 16)
+]
+
+# リストの要素数分だけcheck_adultメソッドを呼び出す
+for person in humans:
+    person.check_adult()
